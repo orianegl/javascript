@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignLab / Javascript</title>
+    <style>
+        .red {
+            color: rgb(118, 183, 240);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="maintitle" class="foobar">DesignLab / Javascript</h1>
+
+    <button id="showabout">Show About</button>
+    <button id="showelsewhere">Show Elsewhere</button>
+
+    <div id="about">
+        <p>It's me it's Oriane
+        </p>
+    </div>
+    <div id="elsewhere">
+    <p>bonjour</p>
+        </div>
+
+
+
+ <script>
+
+//Select the button.
+var showAboutButton = document.getElementById('showabout');
+var showElsewhereButton = document.getElementById('showelsewhere');
+
+var aboutSection = document.getElementById('about');
+var elsewhereSection = document.getElementById('elsewhere');
+
+elsewhereSection.style.display = 'none';
+
+//Listen for the button click, and hide the h1.
+showAboutButton.addEventListener('click', function() {
+    aboutSection.style.display = 'block';
+    elsewhereSection.style.display = 'none';
+});
+
+//Listen for the button click, and hide the h1.
+showElsewhereButton.addEventListener('click', function() {
+    aboutSection.style.display = 'none';
+    elsewhereSection.style.display = 'block';
+});
+
+    </script>
+</body>
+</html>
